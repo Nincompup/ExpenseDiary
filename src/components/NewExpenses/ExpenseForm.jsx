@@ -23,7 +23,7 @@ const ExpenseForm = (props) => {
             id:'e5',
            title: title,
            amount: amount,
-           dat: new Date().toDateString() ,
+           dat: new Date(date).toDateString() ,
         };
         props.submitdatafun(data);
         settitle('');
@@ -43,10 +43,10 @@ const ExpenseForm = (props) => {
                 <label>Amount</label>
                 <input type="number" onChange={amountChangeHandler} min="0.01" step="0.01" />
             </div>
-            {/* <div className="new-expense__control">
+            <div className="new-expense__control">
                 <label>Date</label>
                 <input type="date" onChange={dateChangeHandler} min="2019-01-01" max="2022-12-31" />
-            </div> */}
+            </div>
         </div>
         <div className="new_expense__actions">
             <button type="submit">Add Expense</button>

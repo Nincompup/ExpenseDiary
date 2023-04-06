@@ -4,6 +4,7 @@ import '../css/styles.css'
 const ExpenseItem = (props) => {
   return (
     <div>
+      
         <div className="expense-item">
             {props.dat}
       
@@ -12,6 +13,7 @@ const ExpenseItem = (props) => {
             <div className="expense-item__price">{props.amount}</div>
         </div>
         </div>
+
     </div>
   );
 }

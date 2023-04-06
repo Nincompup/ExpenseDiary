@@ -42,9 +42,10 @@ function App() {
     <div>
       <NewExpense submitdatatoapp={onsaveinapp}/>
       {
+        expenses.length===0?<p>No list here</p>:(
         expenses.map((expense)=>(
           <ExpenseItem key={expense.id} title={expense.title} amount={expense.amount} dat={expense.dat}/>
-        ))
+        )))
       }
     </div>
   );
